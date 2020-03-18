@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=nord
+Comment=An arctic, north-bluish color palette.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=nord
+GtkTheme=nord

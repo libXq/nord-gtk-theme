@@ -1,0 +1,29 @@
+/*************
+ ! Base states
+ *************/
+
+* {
+  -GtkWindow-resize-grip-height: 0;
+  -GtkWindow-resize-grip-width: 0;
+  -WnckTasklist-fade-overlay-rect: 0;
+
+  -gtk-outline-radius: 0;
+  outline: none;
+
+  border-radius: 0;
+  border: none;
+
+  -gtk-icon-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.background {
+  background-color: rgba($bg_color, $opacity);
+  color: rgba($fg_color, $opacity);
+
+  &:backdrop {
+    background-color: rgba($bg_color, $backdrop_opacity);
+    color: rgba($fg_color, $backdrop_opacity);
+  }
+}

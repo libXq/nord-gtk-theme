@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gresources>
+  <gresource prefix='/org/gtk'>
+    <file>dist/gtk.css</file>
+    <file>dist/gtk-dark.css</file>
+  </gresource>
+</gresources>
