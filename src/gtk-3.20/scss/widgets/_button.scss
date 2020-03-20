@@ -6,8 +6,6 @@ button {
   background-color: rgba($button_bg_color, $opacity);
   color: rgba($button_fg_color, $opacity);
 
-  &:hover, &:focus { background-color: rgba($button_hover_bg_color, $opacity); }
-
   &:backdrop {
     background-color: rgba($button_bg_color, $backdrop_opacity);
     color: rgba($button_fg_color, $backdrop_opacity);
@@ -16,13 +14,13 @@ button {
   &.flat {
     background: none;
 
-    &:hover:not(.link):not(.visited), &:focus:not(.link):not(.visited) { color: rgba($button_hover_fg_color, $opacity); }
-
-     &:active:not(:hover):not(:focus) {
+    &:active:not(:hover):not(:focus) {
       color: rgba($button_selected_bg_color, $opacity);
 
       &:backdrop { color: rgba($button_selected_bg_color, $backdrop_opacity); }
     }
+
+    &:hover:not(.link):not(.visited):not(:disabled), &:focus:not(.link):not(.visited):not(:disabled) { color: rgba($button_hover_fg_color, $opacity); }
   }
 
   &.suggested-action {
@@ -32,6 +30,11 @@ button {
     &:backdrop {
       background-color: rgba($button_suggested_color, $backdrop_opacity);
       color: rgba($button_selected_fg_color, $backdrop_opacity);
+    }
+
+    &:hover, &:focus {
+      background-color: rgba($button_hover_bg_color, $opacity);
+      color: rgba($button_suggested_color, $opacity);
     }
   }
 
@@ -43,6 +46,11 @@ button {
       background-color: rgba($button_attention_color, $backdrop_opacity);
       color: rgba($button_selected_fg_color, $backdrop_opacity);
     }
+
+    &:hover, &:focus {
+      background-color: rgba($button_hover_bg_color, $opacity);
+      color: rgba($button_attention_color, $opacity);
+    }
   }
 
   &.destructive-action {
@@ -53,9 +61,29 @@ button {
       background-color: rgba($button_destructive_color, $backdrop_opacity);
       color: rgba($button_selected_fg_color, $backdrop_opacity);
     }
+
+    &:hover, &:focus {
+      background-color: rgba($button_hover_bg_color, $opacity);
+      color: rgba($button_destructive_color, $opacity);
+    }
   }
 
-  &:checked, &:active:not(.flat):not(:hover):not(:focus) {
+  &:checked {
+    background-color: rgba($button_selected_bg_color, $opacity);
+    color: rgba($button_selected_fg_color, $opacity);
+
+    &:backdrop {
+      background-color: rgba($button_selected_bg_color, $backdrop_opacity);
+      color: rgba($button_selected_fg_color, $backdrop_opacity);
+    }
+
+    &:hover, &:focus {
+      background-color: rgba($button_hover_bg_color, $opacity);
+      color: rgba($button_selected_bg_color, $opacity);
+    }
+  }
+
+  &:active:not(:hover):not(:focus) {
     background-color: rgba($button_selected_bg_color, $opacity);
     color: rgba($button_selected_fg_color, $opacity);
 
@@ -64,4 +92,6 @@ button {
       color: rgba($button_selected_fg_color, $backdrop_opacity);
     }
   }
+
+  &:hover:not(.flat):not(.link):not(.visited):not(:disabled), &:focus:not(.flat):not(.link):not(.visited):not(:disabled) { background-color: rgba($button_hover_bg_color, $opacity); }
 }

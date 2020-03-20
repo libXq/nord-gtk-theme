@@ -17,6 +17,8 @@
   border-radius: 0;
   border: none;
 
+  &:backdrop { -gtk-icon-effect: dim; }
+
   &:hover, &:focus { -gtk-icon-effect: highlight; }
 
   &:focus:not(:hover) {
@@ -26,20 +28,18 @@
     outline-width: 1px;
   }
 
-  &:backdrop { -gtk-icon-effect: dim; }
-
   &:link {
     color: rgba($link_color, $opacity);
 
     label { text-decoration-line: none; }
+
+    &:backdrop { color: rgba($link_color, $backdrop_opacity); }
 
     &:hover, &:focus {
       color: rgba($link_color, $opacity);
 
       label { text-decoration-line: underline; }
     }
-
-    &:backdrop { color: rgba($link_color, $backdrop_opacity); }
   }
 
   &:visited {
@@ -47,13 +47,13 @@
 
     label { text-decoration-line: none; }
 
+    &:backdrop { color: rgba($visited_color, $backdrop_opacity); }
+
     &:hover, &:focus {
       color: rgba($visited_color, $opacity);
 
       label { text-decoration-line: underline; }
     }
-
-    &:backdrop { color: rgba($visited_color, $backdrop_opacity); }
   }
 
   &:disabled {
