@@ -7,15 +7,72 @@
   -GtkWindow-resize-grip-width: 0;
   -WnckTasklist-fade-overlay-rect: 0;
 
+  -gtk-icon-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
+
   -gtk-outline-radius: 0;
   outline: none;
 
   border-radius: 0;
   border: none;
 
-  -gtk-icon-shadow: none;
-  box-shadow: none;
-  text-shadow: none;
+  &:hover, &:focus { -gtk-icon-effect: highlight; }
+
+  &:focus:not(:hover) {
+    outline-color: $outline_color;
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-width: 1px;
+  }
+
+  &:backdrop { -gtk-icon-effect: dim; }
+
+  &:link {
+    color: rgba($link_color, $opacity);
+
+    label { text-decoration-line: none; }
+
+    &:hover, &:focus {
+      color: rgba($link_color, $opacity);
+
+      label { text-decoration-line: underline; }
+    }
+
+    &:backdrop { color: rgba($link_color, $backdrop_opacity); }
+  }
+
+  &:visited {
+    color: rgba($visited_color, $opacity);
+
+    label { text-decoration-line: none; }
+
+    &:hover, &:focus {
+      color: rgba($visited_color, $opacity);
+
+      label { text-decoration-line: underline; }
+    }
+
+    &:backdrop { color: rgba($visited_color, $backdrop_opacity); }
+  }
+
+  &:disabled {
+    background: none;
+    color: rgba($disabled_fg_color, $opacity);
+
+    &:backdrop {
+      background: none;
+      color: rgba($disabled_fg_color, $backdrop_opacity);
+    }
+  }
+
+/*
+  &:indeterminate {
+    color: rgba($disabled_fg_color, $opacity);
+
+    &:backdrop { color: rgba($disabled_fg_color, $backdrop_opacity); }
+  }
+  */
 }
 
 .background {
@@ -27,3 +84,23 @@
     color: rgba($fg_color, $backdrop_opacity);
   }
 }
+
+assistant {
+  .sidebar {
+    background-color: rgba($base_color, $opacity);
+
+    &:backdrop { background-color: rgba($base_color, $backdrop_opacity); }
+  }
+
+  .sidebar label.highlight {
+    background-color: rgba($assistant_color, $opacity);
+    color: rgba($selected_fg_color, $opacity);
+
+    &:backdrop {
+      background-color: rgba($assistant_color, $backdrop_opacity);
+      color: rgba($selected_fg_color, $backdrop_opacity);
+    }
+  }
+}
+
+image, label, box, grid { background: none; }

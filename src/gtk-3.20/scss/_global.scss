@@ -20,6 +20,31 @@ $nord15: #b48ead;
 $opacity: 1;
 $backdrop_opacity: .8;
 
-//theme colors
+//base colors
+$outline_color: $nord1;
+$base_color: $nord1;
 $bg_color: $nord0;
 $fg_color: $nord4;
+
+$disabled_fg_color: $nord3;
+$hover_bg_color: $nord1;
+$hover_fg_color: $nord5;
+
+$selected_bg_color: $nord8;
+$selected_fg_color: $nord0;
+
+$link_color: $nord8;
+$visited_color: $nord15;
+$attention_color: $nord13;
+$assistant_color: $nord7;
+
+//button colors
+$button_bg_color: $nord2;
+$button_fg_color: $nord4;
+$button_hover_bg_color: $nord3;
+$button_hover_fg_color: $nord5;
+$button_selected_bg_color: $selected_bg_color;
+$button_selected_fg_color: $selected_fg_color;
+$button_suggested_color: $nord9;
+$button_attention_color: $nord13;
+$button_destructive_color: $nord11;
