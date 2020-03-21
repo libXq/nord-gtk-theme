@@ -1,0 +1,22 @@
+/*********
+ ! Spinner
+**********/
+
+spinner {
+  @keyframes spin {
+    to { -gtk-icon-transform: rotate(1turn); }
+  }
+
+  &, &:insensitive {
+    color: rgba($spinner_color, 0);
+
+    &:backdrop { color: rgba($spinner_color, 0); }
+  }
+
+  &:checked {
+    animation: spin 6s linear infinite;
+    color: rgba($spinner_color, $opacity);
+
+    &:backdrop { color: rgba($spinner_color, $backdrop_opacity); }
+  }
+}

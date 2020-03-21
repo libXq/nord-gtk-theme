@@ -1,0 +1,11 @@
+/*********
+ ! Entry *
+**********/
+
+entry {
+  background-color: rgba($entry_bg_color, $opacity);
+
+  &:backdrop {
+    background-color: rgba($entry_bg_color, $backdrop_opacity);
+  }
+}

@@ -1,0 +1,24 @@
+/***************
+ ! Generic views
+****************/
+.view {
+  background-color: rgba($view_bg_color, $opacity);
+  color: rgba($view_fg_color, $opacity);
+
+  &:backdrop {
+    background-color: rgba($view_bg_color, $backdrop_opacity);
+    color: rgba($view_fg_color, $backdrop_opacity);
+  }
+}
+
+textview {
+  &.view {
+    background: none;
+    color: rgba($textview_fg_color, $opacity);
+
+    &:backdrop {
+      background: none;
+      color: rgba($textview_fg_color, $backdrop_opacity);
+    }
+  }
+}

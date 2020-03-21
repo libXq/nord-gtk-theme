@@ -3,6 +3,8 @@
 **********/
 
 button {
+  padding: $button_padding;
+
   background-color: rgba($button_bg_color, $opacity);
   color: rgba($button_fg_color, $opacity);
 
@@ -15,6 +17,7 @@ button {
     background: none;
 
     &:active:not(:hover):not(:focus) {
+      background: none;
       color: rgba($button_selected_bg_color, $opacity);
 
       &:backdrop { color: rgba($button_selected_bg_color, $backdrop_opacity); }
@@ -93,5 +96,32 @@ button {
     }
   }
 
-  &:hover:not(.flat):not(.link):not(.visited):not(:disabled), &:focus:not(.flat):not(.link):not(.visited):not(:disabled) { background-color: rgba($button_hover_bg_color, $opacity); }
+  &:hover:not(.combo):not(.flat):not(.link):not(.visited):not(:disabled), &:focus:not(.combo):not(.flat):not(.link):not(.visited):not(:disabled) { background-color: rgba($button_hover_bg_color, $opacity); }
+}
+
+combobox {
+  button.combo {
+      background-color: rgba($combobox_bg_color, $opacity);
+      color: rgba($combobox_fg_color, $opacity);
+
+      &:backdrop {
+        background-color: rgba($combobox_bg_color, $backdrop_opacity);
+        color: rgba($combobox_fg_color, $backdrop_opacity);
+      }
+
+      &:hover, &:focus {
+        background-color: rgba($combobox_bg_color, $opacity);
+        color: rgba($combobox_hover_fg_color, $opacity);
+      }
+  }
+
+  menu menuitem {
+    background-color: rgba($combobox_bg_color, $opacity);
+    color: rgba($combobox_fg_color, $opacity);
+
+    &:hover {
+      background-color: rgba($combobox_hover_bg_color, $layer_opacity);
+      color: rgba($combobox_hover_fg_color, $opacity);
+    }
+  }
 }

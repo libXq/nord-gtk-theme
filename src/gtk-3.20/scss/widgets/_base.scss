@@ -7,6 +7,9 @@
   -GtkWindow-resize-grip-width: 0;
   -WnckTasklist-fade-overlay-rect: 0;
 
+  -GtkWidget-cursor-color: $caret_color;
+  -GtkWidget-secondary-cursor-color: $caret_color;
+
   -gtk-icon-shadow: none;
   box-shadow: none;
   text-shadow: none;
@@ -56,21 +59,21 @@
     }
   }
 
-  &:disabled {
+  &:disabled, &:insensitive {
     background: none;
-    color: rgba($disabled_fg_color, $opacity);
+    color: rgba($disabled_color, $opacity);
 
     &:backdrop {
       background: none;
-      color: rgba($disabled_fg_color, $backdrop_opacity);
+      color: rgba($disabled_color, $backdrop_opacity);
     }
   }
 
 /*
   &:indeterminate {
-    color: rgba($disabled_fg_color, $opacity);
+    color: rgba($disabled_color, $opacity);
 
-    &:backdrop { color: rgba($disabled_fg_color, $backdrop_opacity); }
+    &:backdrop { color: rgba($disabled_color, $backdrop_opacity); }
   }
   */
 }
