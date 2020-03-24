@@ -1,0 +1,10 @@
+/**************
+ ! Window frame
+***************/
+decoration {
+  background-color: rgba($bg_color, $opacity);
+
+  &:backdrop {
+    background-color: rgba($bg_color, $backdrop_opacity);
+  }
+}
