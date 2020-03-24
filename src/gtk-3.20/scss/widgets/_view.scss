@@ -1,6 +1,8 @@
 /***************
  ! Generic views
 ****************/
+* { -GtkTextView-error-underline-color: rgba($textview_error_color, $opacity); }
+
 .view {
   background-color: rgba($view_bg_color, $opacity);
   color: rgba($view_fg_color, $opacity);
@@ -8,6 +10,45 @@
   &:backdrop {
     background-color: rgba($view_bg_color, $backdrop_opacity);
     color: rgba($view_fg_color, $backdrop_opacity);
+  }
+
+  &:selected {
+    background-color: rgba($selected_bg_color, $opacity);
+    color: rgba($selected_fg_color, $opacity);
+
+    &:backdrop {
+      background-color: rgba($selected_bg_color, $backdrop_opacity);
+      color: rgba($selected_fg_color, $backdrop_opacity);
+    }
+  }
+}
+
+.cell {
+  &:selected {
+    background-color: rgba($selected_bg_color, $opacity);
+    color: rgba($selected_fg_color, $opacity);
+
+    &:backdrop {
+      background-color: rgba($selected_bg_color, $backdrop_opacity);
+      color: rgba($selected_fg_color, $backdrop_opacity);
+    }
+  }
+}
+
+row {
+  &:selected, &:focus {
+    background-color: rgba($selected_bg_color, $opacity);
+    color: rgba($selected_fg_color, $opacity);
+
+    &:backdrop {
+      background-color: rgba($selected_bg_color, $backdrop_opacity);
+      color: rgba($selected_fg_color, $backdrop_opacity);
+    }
+  }
+
+  &:hover:not(:selected):not(:focus) {
+    background-color: rgba($base_color, $opacity);
+    color: rgba($view_fg_color, $opacity);
   }
 }
 
