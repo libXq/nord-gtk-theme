@@ -7,9 +7,6 @@
   -GtkWindow-resize-grip-width: 0;
   -WnckTasklist-fade-overlay-rect: 0;
 
-  -GtkWidget-cursor-color: $caret_color;
-  -GtkWidget-secondary-cursor-color: $caret_color;
-
   -gtk-icon-shadow: none;
   box-shadow: none;
   text-shadow: none;
@@ -59,7 +56,7 @@
     }
   }
 
-  &:disabled, &:insensitive {
+  &:disabled {
     background: none;
     color: rgba($disabled_color, $opacity);
 
