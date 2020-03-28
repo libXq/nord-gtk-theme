@@ -24,13 +24,6 @@
 
   &:hover, &:focus { -gtk-icon-effect: highlight; }
 
-  &:focus:not(:hover) {
-    outline-color: $outline_color;
-    outline-style: solid;
-    outline-offset: 2px;
-    outline-width: 1px;
-  }
-
   &:link {
     color: rgba($link_color, $opacity);
 

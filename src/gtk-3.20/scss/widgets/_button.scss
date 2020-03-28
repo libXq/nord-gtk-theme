@@ -97,6 +97,13 @@ button {
   }
 
   &:hover:not(.combo):not(.flat):not(.link):not(.visited):not(:disabled), &:focus:not(.combo):not(.flat):not(.link):not(.visited):not(:disabled) { background-color: rgba($button_hover_bg_color, $opacity); }
+  
+  &:focus:not(.combo):not(.flat):not(.link):not(.visited):not(:hover) {
+    outline-color: $outline_color;
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-width: 1px;
+  }
 }
 
 combobox {

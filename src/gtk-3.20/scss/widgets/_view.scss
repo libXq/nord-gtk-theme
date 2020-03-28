@@ -1,6 +1,7 @@
 /***************
  ! Generic views
 ****************/
+
 * { -GtkTextView-error-underline-color: rgba($textview_error_color, $opacity); }
 
 .view {
@@ -25,27 +26,15 @@
   }
 }
 
-.cell {
-  &:selected {
-    background-color: rgba($selected_bg_color, $opacity);
-    color: rgba($selected_fg_color, $opacity);
-
-    &:backdrop {
-      background-color: rgba($selected_bg_color, $backdrop_opacity);
-      color: rgba($selected_fg_color, $backdrop_opacity);
-    }
-  }
-}
-
 row {
   &:selected, &:focus {
-    background-color: rgba($selected_bg_color, $opacity);
-    color: rgba($selected_fg_color, $opacity);
+      background-color: rgba($selected_bg_color, $opacity);
+      color: rgba($selected_fg_color, $opacity);
 
-    &:backdrop {
-      background-color: rgba($selected_bg_color, $backdrop_opacity);
-      color: rgba($selected_fg_color, $backdrop_opacity);
-    }
+      &:backdrop {
+        background-color: rgba($selected_bg_color, $backdrop_opacity);
+        color: rgba($selected_fg_color, $backdrop_opacity);
+      }
   }
 
   &:hover:not(:selected):not(:focus) {
@@ -65,3 +54,8 @@ textview {
     }
   }
 }
+
+/************
+! Treeview
+*************/
+
