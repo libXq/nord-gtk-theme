@@ -59,3 +59,28 @@ textview {
 ! Treeview
 *************/
 
+treeview.view {
+  -GtkTreeView-grid-line-width: 0;
+  -GtkTreeView-tree-line-width: 1;
+  -GtkTreeView-tree-line-pattern: "";
+}
+
+/***********
+ ! Separator
+************/
+//todo
+paned separator {
+}
+
+/**********
+ ! Frames *
+***********/
+
+frame.border-inset > border,
+frame.border-outset > border,
+frame.border-groove > border,
+frame.border-ridge > border {
+  border: 1px solid rgba($borders_color, $opacity);
+
+  &:backdrop { border-color: rgba($borders_color, $backdrop_opacity); }
+}
