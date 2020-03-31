@@ -18,5 +18,11 @@ spinner {
     color: rgba($spinner_color, $opacity);
 
     &:backdrop { color: rgba($spinner_color, $backdrop_opacity); }
+
+    &:disabled {
+      color: rgba($disabled_color, $opacity);
+
+      &:backdrop { color: rgba($disabled_color, $backdrop_opacity); }
+    }
   }
 }
