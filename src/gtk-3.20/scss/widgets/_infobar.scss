@@ -11,27 +11,18 @@ infobar {
     color: rgba($infobar_fg_color, $backdrop_opacity);
   }
 
-  &.info {
-    color: rgba($infobar_info_color, $opacity);
+  $types: (
+    info: ($infobar_info_color),
+    warning: ($infobar_warning_color),
+    error: ($infobar_error_color),
+    question: ($infobar_question_color),
+  );
 
-    &:backdrop { color: rgba($infobar_info_color, $backdrop_opacity); }
-  }
+  @each $type, $infobar_type_color in $types {
+    &.#{$type} {
+      color: rgba($infobar_type_color, $opacity);
 
-  &.question {
-    color: rgba($infobar_question_color, $opacity);
-
-    &:backdrop { color: rgba($infobar_question_color, $backdrop_opacity); }
-  }
-
-  &.warning {
-    color: rgba($infobar_warning_color, $opacity);
-
-    &:backdrop { color: rgba($infobar_warning_color, $backdrop_opacity); }
-  }
-
-  &.error {
-    color: rgba($infobar_error_color, $opacity);
-
-    &:backdrop { color: rgba($infobar_error_color, $backdrop_opacity); }
+      &:backdrop { color: rgba($infobar_type_color, $backdrop_opacity); }
+    }
   }
 }
