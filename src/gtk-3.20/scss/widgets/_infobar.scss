@@ -1,0 +1,37 @@
+/*********
+ ! Infobar
+**********/
+
+infobar {
+  background-color: rgba($infobar_bg_color, $opacity);
+  color: rgba($infobar_fg_color, $opacity);
+
+  &:backdrop {
+    background-color: rgba($infobar_bg_color, $backdrop_opacity);
+    color: rgba($infobar_fg_color, $backdrop_opacity);
+  }
+
+  &.info {
+    color: rgba($infobar_info_color, $opacity);
+
+    &:backdrop { color: rgba($infobar_info_color, $backdrop_opacity); }
+  }
+
+  &.question {
+    color: rgba($infobar_question_color, $opacity);
+
+    &:backdrop { color: rgba($infobar_question_color, $backdrop_opacity); }
+  }
+
+  &.warning {
+    color: rgba($infobar_warning_color, $opacity);
+
+    &:backdrop { color: rgba($infobar_warning_color, $backdrop_opacity); }
+  }
+
+  &.error {
+    color: rgba($infobar_error_color, $opacity);
+
+    &:backdrop { color: rgba($infobar_error_color, $backdrop_opacity); }
+  }
+}
